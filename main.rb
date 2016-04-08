@@ -6,5 +6,9 @@ require_relative "lib/Branch.rb"
 require_relative "lib/Book.rb"
 require_relative "lib/Patron.rb"
 require_relative "lib/Staff.rb"
+require "sinatra"
+require "sinatra/activerecord"
+require "sinatra/reloader"
+
 
 binding.pry
