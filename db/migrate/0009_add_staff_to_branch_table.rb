@@ -1,5 +1,5 @@
-#class AddStaffToBranchTable < ActiveRecord::Migration
-	#def change
-		#add_column :staff, :branch_id, :integer
-	#end
-#end
+class AddStaffToBranchTable < ActiveRecord::Migration
+	def change
+		add_column :staffs, :branch_id, :integer
+	end
+end
