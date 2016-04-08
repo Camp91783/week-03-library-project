@@ -1,39 +1,30 @@
-#branch model
-# Branch class
-# table branch
-#branch.rb
-#branch_test.rb
-#table will be branche
-#require "pry"
-
+require "pry"
+require "yaml"
+require "active_record"
 require_relative "../config/environment.rb"
+require_relative "../lib/staff.rb"
+require_relative "../lib/book.rb"
+require_relative "../lib/patron.rb"
 
 
 class Branch < ActiveRecord::Base
+  
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :phone_number, presence: true
 
-def my_valid?
-		if branch_name.nil? 
-			return false 
-		elsif address.nil? 
-			return false
-		elsif phone_number.nil? 
-			return false
-		else
-			return true
-		end
-	end
-
-def phone_number
-	phone_number.length(10)
-end
-
-
-	attr_accessor :branch_name, :address, :phone_number
-
-	def initialize(branch_name:, address:, phone_number:)
-	end
+  has_many :books
+  has_many :staff
+	
 end
 
 
 
-#binding.pry
+
+		
+
+
+
+
+
+

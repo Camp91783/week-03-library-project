@@ -5,7 +5,7 @@ require_relative '../config/environment.rb'
 
 
 
-	class BranchTest < MiniTest::test
+	class BranchTest < MiniTest::Test
 
 		def test_should_be_creatable_under_normal_circumstances
     	branch = Branch.new(branch_name: "west", address: "123 Harrison", phone_number: "4022123194")
