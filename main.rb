@@ -20,7 +20,7 @@ end
  #branches index
  	get '/branches/index' do
  	  @branches = Branch.all
- 	  erb :branches_index
+ 	  erb :Branches_index
  	end
 
 
