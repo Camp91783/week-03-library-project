@@ -23,5 +23,11 @@ end
  	  erb :Branches_index
  	end
 
+ 	#branch show
+ get 'branch/:id' do
+ 	  @branch = Branch.find_by_id(params['id'])
+ 	  erb :branch_show
+ end
+
 
 
