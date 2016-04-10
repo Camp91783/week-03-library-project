@@ -1,0 +1,14 @@
+<% if @branch.errors.any? %>
+   <% @branch.errors.full_messages.each do |m| %>
+     <p> Error: <%=m%></p>
+   <%end%>
+ <%end%>
+ 
+ <h1>Edit <%=@branch.branch_name%></h1>
+ <form action="/branch/<%=@branch.id%>/update" method="post">
+   Branch Name: <input type="text" name="branch_name" value="<%=@branch.branch_name%>"></br>
+   Address: <input type="text" name="address" value="<%=@branch.address%>"></br>
+   Phone Number: <input type="text" name="phone_number" value="<%=@branch.phone_number%>"></br>
+   <input type="submit" value="Update Branch">
+ </form>
+ <p><a href="/branch/<%=@branch.id%>">Back to <%=@branch.branch_name%></a></p>
