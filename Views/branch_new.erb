@@ -1,0 +1,16 @@
+<% if @branch.errors.any? %>
+   <% @branch.errors.full_messages.each do |m| %>
+     <p>Error: <%= m %></p>
+   <% end %>
+ <% end %>
+ 
+ <h1>Create a New Branch</h1>
+ 
+ <form action="/branches" method="post">
+   Branch Name: <input type="text" name="branch_name"></br>
+   Address: <input type="text" name="address"></br>
+   Phone Number: <input type="text" name="phone_number"></br>
+   <input type="submit" value="Create New Branch">
+ </form>
+ 
+ <p><a href="/branches">Back to Branches Menu</a><p>

@@ -1,7 +1,7 @@
 <h1>Branches Index</h1>
  <ul>
    <% @branches.each do |l| %>
-	    <li><a href="/library/<%=l.id%>"><%=l.branch_name%></a>
+	    <li><a href="/branch/<%=l.id%>"><%=l.branch_name%></a>
  	   </br><%=b.address%></br><%=b.phone_number%></li>   
  <% end %>
  </ul>
