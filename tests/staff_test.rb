@@ -1,7 +1,6 @@
 #staff test
 require_relative "test_helper"
 require_relative "../lib/branch.rb"
-require_relative '../config/environment.rb'
  
 
 
