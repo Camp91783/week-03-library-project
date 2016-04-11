@@ -16,6 +16,10 @@ get '/branches' do
 	erb :branches_menu
 end
 
+get '/books' do
+  erb :books_menu
+end
+
 
  #branches index
  	get '/branches/index' do
@@ -28,6 +32,8 @@ end
  	  @branch = Branch.find_by_id(params['id'])
  	  erb :branch_show
  end
+
+# create new branch
 
  get '/branch/new' do
    @branch = Branch.new
